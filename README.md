@@ -77,15 +77,53 @@ Mobile App Integration (React Native/Flutter)
 
 
 
-student-recommender/
-│── app.py                  # Flask/Django backend
-│── recommender.py          # Core recommendation logic
-│── data_preprocessing.py   # Data cleaning & EDA
-│── models/                # Saved ML models
-│   ├── collaborative_model.pkl
-│   ├── content_model.pkl
-│── static/                # Frontend assets (CSS/JS)
-│── templates/             # HTML templates
-│   ├── index.html
-│── requirements.txt        # Python dependencies
-│── README.md              # Project documentation
+student_recommender/
+│── README.md
+│── requirements.txt
+│── config/
+│   ├── __init__.py
+│   ├── settings.py
+│   └── constants.py
+│
+├── data/
+│   ├── database/
+│   │   ├── models.py
+│   │   └── crud.py
+│   ├── etl/
+│   │   ├── loaders.py
+│   │   └── transformers.py
+│   └── sample_data/
+│
+├── services/
+│   ├── recommendation/
+│   │   ├── content_based/
+│   │   ├── collaborative/
+│   │   ├── knowledge_tracing/
+│   │   ├── session_based/
+│   │   └── hybrid.py
+│   ├── nlp/
+│   │   ├── text_processing.py
+│   │   └── semantic_analyzer.py
+│   ├── social/
+│   │   ├── peer_analyzer.py
+│   │   └── community_model.py
+│   └── evaluation/
+│       ├── ab_testing.py
+│       └── metrics.py
+│
+├── models/
+│   ├── dkt_model/
+│   │   ├── train.py
+│   │   └── model.py
+│   ├── rl_optimizer/
+│   │   ├── policy_network.py
+│   │   └── environment.py
+│   └── difficulty_estimator/
+│
+├── api/
+│   ├── endpoints/
+│   │   ├── recommendations.py
+│   │   └── feedback.py
+│   └── app.py
+│
+└── tests/
